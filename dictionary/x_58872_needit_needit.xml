@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="New Date/Time" max_length="40" name="u_glide_date_time_8" type="glide_date_time"/>
+        <element label="Opened" max_length="40" name="u_opened" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="4" label="Priority" max_length="40" name="u_priority" type="string">
+            <choice>
+                <element label="Urgent" sequence="0" value="1"/>
+                <element label="High" sequence="1" value="2"/>
+                <element label="Medium" sequence="2" value="3"/>
+                <element label="Low" sequence="3" value="4"/>
+            </choice>
+        </element>
+        <element label="Additional Comments" max_length="32" name="u_reference_10" reference="x_58872_needit_needit" type="reference"/>
+        <element label="Opened by" max_length="32" name="u_reference_11" reference="x_58872_needit_needit" type="reference"/>
+        <element label="New Reference" max_length="32" name="u_reference_12" reference="cmdb_ci_appl_dot_net" type="reference"/>
+        <element label="Work Notes" max_length="32" name="u_reference_13" reference="x_58872_needit_needit" type="reference"/>
+        <element label="New Reference" max_length="32" name="u_reference_14" reference="cmdb_ci_appl_dot_net" type="reference"/>
+        <element label="New Reference" max_length="32" name="u_reference_15" reference="cmdb_ci_appl_dot_net" type="reference"/>
+        <element label="New Reference" max_length="32" name="u_reference_16" reference="cmdb_ci_appl_dot_net" type="reference"/>
+        <element label="New Reference" max_length="32" name="u_reference_9" reference="cmdb_ci_appl_dot_net" type="reference"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Human Resources" sequence="0" value="HR"/>
+                <element label="Facilities" sequence="1" value="facilities"/>
+                <element label="Legal" sequence="2" value="legal"/>
+                <element label="Your Department Choice" sequence="3" value="your_choice"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="13" label="State" max_length="40" name="u_state" type="string">
+            <choice>
+                <element label="Requested" sequence="0" value="13"/>
+                <element label="Awaiting Approval" sequence="1" value="14"/>
+                <element label="Approved" sequence="2" value="15"/>
+                <element label="Awaiting Feedback" sequence="3" value="16"/>
+                <element label="Withdrawn" sequence="4" value="8"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Additional comments" max_length="20" name="u_string_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Work notes" max_length="40" name="u_string_2" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal 1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="Human Resources 1" sequence="0" value="HR1"/>
+                <element label="Human Resources 2" sequence="1" value="HR2"/>
+                <element label="Facilities 1" sequence="2" value="facilities 1"/>
+                <element label="Facilities 2" sequence="3" value="facilities 2"/>
+                <element label="Legal 1" sequence="4" value="legal 1"/>
+                <element label="Legal 2" sequence="5" value="legal 2"/>
+                <element label="Your Department Choice 1" sequence="6" value="yourchoice 1"/>
+                <element label="Your Department Choice 2" sequence="7" value="yourchoice 2"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+        <index name="index">
+            <element name="u_reference_10"/>
+        </index>
+        <index name="index2">
+            <element name="u_reference_11"/>
+        </index>
+        <index name="index3">
+            <element name="u_reference_12"/>
+        </index>
+        <index name="index4">
+            <element name="u_requested_for"/>
+        </index>
+        <index name="index5">
+            <element name="u_reference_13"/>
+        </index>
+        <index name="index6">
+            <element name="u_reference_14"/>
+        </index>
+        <index name="index7">
+            <element name="u_reference_15"/>
+        </index>
+        <index name="index8">
+            <element name="u_reference_16"/>
+        </index>
+        <index name="index9">
+            <element name="u_reference_9"/>
+        </index>
+    </element>
+</database>
